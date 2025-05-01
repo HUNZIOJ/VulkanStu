@@ -1,0 +1,96 @@
+# 忽略编译生成的文件
+*.o
+*.out
+*.a
+*.so
+*.dylib
+*.dll
+
+# 忽略编译器和构建工具生成的文件
+*.obj
+*.exe
+*.dll
+*.pdb
+
+# 忽略构建目录
+build/
+bin/
+
+# 忽略临时文件
+*.tmp
+*.log
+
+# 忽略IDE生成的文件
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+# 忽略操作系统生成的文件
+*.DS_Store
+Thumbs.db
+
+# 忽略文档生成的文件
+*.pdf
+*.docx
+
+# 忽略配置文件
+*.conf
+*.config
+
+# 忽略版本控制文件
+*.lock
+*.swp
+
+# 忽略第三方库和依赖
+third-party/
+dependencies/
+
+# 忽略其他特定文件或目录
+*.bak
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.aux
+*.bbl
+*.blg
+*.brf
+*.cp
+*.glo
+*.gls
+*.ist
+*.log
+*.lof
+*.lot
+*.out
+*.pdf
+*.ps
+*.toc
+*.idx
+*.ind
+*.ilg
+*.spl
+
+# 忽略特定的编辑器和编译器生成的文件
+*~
+*.bak
+*.old
+*.swp
+*.swo
+*.swn
+*.orig
+
+# 忽略特定的IDE文件
+.idea/
+*.iml
+
+# 忽略特定的构建工具文件
+CMakeFiles/
+cmake_install.cmake
+Makefile
+Makefile.in
