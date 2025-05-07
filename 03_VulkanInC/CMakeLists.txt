@@ -8,6 +8,15 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 file(GLOB SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc")
 
+# 我以为validation layer层没生效，要将这个动态链接库配置一下，实际上已经生效了
+# file(GLOB ASSETS "D:/VulkanSDK/1.4.309.0/Bin/VkLayer_khronos_validation.dll")
+# file(COPY "${ASSETS}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/build/bin")
+# file(COPY "${ASSETS}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+# link_libraries(VkLayer_khronos_validation)
+
+file(GLOB ASSETS ${CMAKE_CURRENT_SOURCE_DIR}/assets)
+file(COPY ${ASSETS} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/build)
+
 add_definitions(-DDEBUG)
 
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib "D:\\VulkanSDK\\1.4.309.0\\Lib") # 测试环境直接copy到全局的目录中去，每次创建新项目就直接copy这个CMakeLists.txt，也不需要改什么东西
@@ -16,6 +25,7 @@ link_libraries(glfw3)
 
 # 链接vulkan的库
 link_libraries(vulkan-1)
+
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/build/bin)
 
